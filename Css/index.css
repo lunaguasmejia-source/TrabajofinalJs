@@ -1,13 +1,169 @@
-.container{
-    text-align: center;
-    margin: 30px;
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a{
-    border: 1px gray solid;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0f7ff, #b5eaff, #d6f3ff);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #28536b;
+}
+
+/* CONTENEDORES */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(44, 144, 185, 0.15);
+    border: 1px solid #c5edff;
+    text-align: center;
+}
+
+/* BOTONES */
+.button {
+    display: inline-block;
+    background: linear-gradient(135deg, #65d0f5, #299fd1);
+    color: white;
     text-decoration: none;
-    color: black;
+    padding: 14px 24px;
+    margin: 10px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 12px rgba(41, 159, 209, 0.20);
+    transition: all 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.button:hover {
+    background: linear-gradient(135deg, #299fd1, #1684b5);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(41, 159, 209, 0.35);
+}
+
+/* EFECTO AL PRESIONAR */
+.button:active {
+    transform: scale(0.96);
+}
+
+/* CONTENEDOR DE RESULTADOS */
+#resultado {
+    width: 100%;
+    min-height: 150px;
+    padding: 25px;
+    background-color: #f0faff;
+    border: 2px solid #c7edff;
+    border-radius: 16px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+/* TITULOS DENTRO DE RESULTADOS */
+#resultado h1,
+#resultado h2,
+#resultado h3 {
+    color: #168bb5;
+    margin-bottom: 15px;
+}
+
+/* TEXTOS */
+#resultado p {
+    color: #42677d;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* IMAGENES */
+#resultado img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(41, 159, 209, 0.15);
+}
+
+/* TABLAS */
+#resultado table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#resultado th {
+    background-color: #55bfe8;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+#resultado td {
+    padding: 12px;
+    border-bottom: 1px solid #d7eff9;
+    color: #42677d;
+}
+
+#resultado tr:nth-child(even) {
+    background-color: #eaf8ff;
+}
+
+/* LISTAS */
+#resultado ul,
+#resultado ol {
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+/* BLOQUES DE CODIGO O JSON */
+#resultado pre {
+    background-color: #e5f6ff;
+    color: #28536b;
+    padding: 18px;
+    border-radius: 12px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    border: 1px solid #c5eaff;
+}
+
+/* DISEÑO PARA CELULARES */
+@media (max-width: 600px) {
+    body {
+        padding: 15px 5px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px 12px;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        margin: 12px auto;
+        padding: 15px;
+    }
+
+    #resultado {
+        padding: 15px;
+    }
+
+    #resultado table {
+        font-size: 13px;
+    }
 }
